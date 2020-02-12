@@ -29,6 +29,11 @@ I use this for dotfiles development, maintenance, and testing mostly...
 No, I don't use it for regular day-to-day use.
 
 ### Required Software
+- xxd
+- gzip
+- unzip
+- csplit
+- wget
 - [MacOS Catalina Installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12)
 - VirtualBox
 - VirtualBox Extension Pack (note: released under the Personal Use and Evaluation License)
@@ -41,7 +46,7 @@ You will also need the `boot.efi` file from MacOS 10.15.1 or lower. Place the fi
 
 The `macos-on-virtualbox.sh`, `scripts/make-Catalina-Installer.sh`, and `scripts/make-Catalina-Boot.sh` scripts each contain settings that should be reviewed before running.
 
-Once you have the required files and configurations set use `make` to handle the setup process.
+Once you have the required softare, files, and configurations set use `make` to handle the setup process.
 
 Execute `make` for details on how to run the full installation process.
 
