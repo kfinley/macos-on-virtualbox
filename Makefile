@@ -4,10 +4,10 @@ SHELL=bash
 
 help:
 	@echo "Steps to install Catalina: make COMMAND"
-	@echo "   COMMAND		  Description"
-	@echo " - catalina		: Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina"
-	@echo " - delete		: Delete exiting vm"
-	@echo " - clean		: Delete temporary files (currently busted...)"
+	@echo "   COMMAND	  Description"
+	@echo " - catalina	: Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina"
+	@echo " - delete	: Delete exiting vm"
+	@echo " - clean	: Delete temporary files (currently busted...)"
 
 doc:
 	@bash  $(SCRIPT) documentation

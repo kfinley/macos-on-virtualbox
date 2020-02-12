@@ -48,10 +48,10 @@ Execute `make` for details on how to run the full installation process.
 ```
 $ make
 Steps to install Catalina: make COMMAND
-   COMMAND                Description
- - catalina             : Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina
- - delete               : Delete exiting vm
- - clean                : Delete temporary files (currently busted...)
+   COMMAND        Description
+ - catalina     : Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina
+ - delete       : Delete exiting vm
+ - clean        : Delete temporary files (currently busted...)
  ```
 
 ### How does it work?
@@ -71,15 +71,15 @@ There's a shorter path to getting this working but I reached a working version s
 
 ### History
 
-While working through the 10.15.3 boot issue I came up with a solution that mostly automates the process of installing MacOS Catalina 10.15.3. The core of this project is based on [myspaghetti's](https://github.com/myspaghetti) `macos-guest-virtualbox` but also leverages some of [AlexanderWillner's](https://github.com/AlexanderWillner) `runMacOSinVirtualBox` solution. I've also added things and modified things as needed to make things work. Both of these projects are solid approaches to getting MacOS up on VirtualBox. I really like the automation (and thoroughness) of the `macos-guest-virtualbox` script but I also like the simplicity of `runMacOSinVirtualBox` (or maybe it's just the `makefile`...). 
+While working through the 10.15.3 boot issue I came up with a solution that mostly automates the process of installing MacOS Catalina 10.15.3. The core of this project is based on [myspaghetti's](https://github.com/myspaghetti) `macos-guest-virtualbox` but also leverages some of [AlexanderWillner's](https://github.com/AlexanderWillner) `runMacOSinVirtualBox` solution. Both of these projects are solid approaches to getting MacOS up on VirtualBox. I really like the automation (and thoroughness) of the `macos-guest-virtualbox` script but I also like the simplicity of `runMacOSinVirtualBox` (or maybe it's just the `makefile`...). 
 
-While I worked through the 10.15.3 boot issue a [workaround was posted on `macos-guest-virtualbox`](https://github.com/myspaghetti/macos-guest-virtualbox/issues/134) that does work. I had solved the boot / install issue when the workaround was posted and my solution is slightly different so I decided to clean things up and formalize the project. 
+While I worked through the 10.15.3 boot issue a [workaround was posted on the `macos-guest-virtualbox` project](https://github.com/myspaghetti/macos-guest-virtualbox/issues/134) that does work. I had solved the boot / install issue when the workaround was posted, and solved it a slightly different way, so I decided to clean things up and formalize the project. 
 
-I came at the problem from a different angle and create a new MacOS installer image that contains the older `boot.efi` file injected into both the installer image, MacOS Installer app, and the BaseSystem.dmg within the MacOS Installer app. This helps with automating the setup with fewer reboots and less streaming keys to the VM Terminal. (*Slipstreaming* installers is [nothing new](http://kylefinley.net/slipstream-visual-studio-2008-service-pack-1) to me so this just seemed like the way to handle it...) 
+I came at the problem from a different angle and created a new MacOS installer image that contains the older `boot.efi` file injected into both the installer image, MacOS Installer app, and the BaseSystem.dmg within the MacOS Installer app. This helps with automating the setup with fewer reboots and less streaming keys to the VM Terminal. (*Slipstreaming* installers is [nothing new](http://kylefinley.net/slipstream-visual-studio-2008-service-pack-1) to me so this just seemed like the way to handle it...) 
 
 I used bits of `runMacOSinVirtualBox` so I decided to merge things and start building a hybrid solution that autmated as much as possible. The project still needs cleanup and the process could be built back into either original source project if wanted.
 
-Parts of the original `macos-guest-virtualbox` functionality are no longer needed for this approach so I've removed some things (more cleanup is still needed).
+Parts of the original `macos-guest-virtualbox.sh` functionality are no longer needed for this approach so I've removed some things (more cleanup is still needed).
 
 ## Documentation
 Documentation for the `macos-on-virtualbox` script can be viewed by executing the command `make doc`. (This documentation is not up to date which is why it's not included in `make help`).
