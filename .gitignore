@@ -1,0 +1,27 @@
+.DS_Store
+/scratch
+
+macOS-Catalina.vdi
+macOS-Catalina_MLB.bin
+macOS-Catalina_ROM.bin
+macOS-Catalina_csr-active-config.bin
+macOS-Catalina_startup.nsh
+macOS-Catalina_system-id.bin
+ApfsDriverLoader.efi
+AppleImageLoader.efi
+AppleSupport-v2.0.4-RELEASE.zip
+AppleUiSupport.efi
+Catalina_AppleDiagnostics.chunklist
+Catalina_AppleDiagnostics.dmg
+Catalina_BaseSystem.chunklist
+Catalina_InstallInfo.plist
+Catalina_Installation_files.viso
+
+scripts/Catalina_BaseSystem-10.15.3.dmg
+scripts/Catalina_BaseSystem-10.15.3.iso
+scripts/Catalina_Boot_Image.dmg
+scripts/Catalina_Boot_Image.iso
+scripts/EFI
+scripts/Install_Catalina-10.15.3.dmg
+scripts/Install_Catalina-10.15.3.iso
+scripts/macOS Base System.dmg
