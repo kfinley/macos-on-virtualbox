@@ -28,16 +28,16 @@ I use this for dotfiles development, maintenance, and testing mostly...
 ***Are you really running MacOS in VirtualBox?***
 No, I don't use it for regular day-to-day use.
 
-### Required Software
-- xxd
-- gzip
-- unzip
-- csplit
-- wget
+### Required Software & components
 - [MacOS Catalina Installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12)
 - VirtualBox
 - VirtualBox Extension Pack (note: released under the Personal Use and Evaluation License)
 - `boot.efi` file from MacOS 10.15.1 (10.15 and Mojave files work as well)
+- csplit
+- gzip
+- xxd
+- unzip
+- wget
 
 ### Configuration & Setup
 You will need the [MacOS Catalina Installer](https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12) under the Applications folder (or change the location in `scripts/make-Catalina-Installer.sh`).
@@ -46,17 +46,18 @@ You will also need the `boot.efi` file from MacOS 10.15.1 or lower. Place the fi
 
 The `macos-on-virtualbox.sh`, `scripts/make-Catalina-Installer.sh`, and `scripts/make-Catalina-Boot.sh` scripts each contain settings that should be reviewed before running.
 
-Once you have the required softare, files, and configurations set use `make` to handle the setup process.
+Once you have the required software, files, and configurations set use `make` to handle the setup process. It's highly recommended that you run `make check` to confirm your system has all the required dependencies installed before running `make catalina`.
 
 Execute `make` for details on how to run the full installation process.
 
 ```
 $ make
 Steps to install Catalina: make COMMAND
-   COMMAND        Description
- - catalina     : Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina
- - delete       : Delete exiting vm
- - clean        : Delete temporary files (currently busted...)
+   COMMAND	  Description
+ - check	: Check required dependencies are installed
+ - catalina	: Create VM & disks, partition HD, init installer, fix startup, run installer, fix Preboot, and start Catalina
+ - delete	: Delete exiting vm
+ - clean	: Delete temporary files (currently busted...)
  ```
 
 ### How does it work?
