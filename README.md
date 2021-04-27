@@ -1,4 +1,4 @@
-# Run MacOS Catalina (10.15.13) Guest on VirtualBox
+# Run MacOS Catalina (10.15.3) Guest on VirtualBox
 
 Install MacOS Catalina 10.15.3 with one command:
 
